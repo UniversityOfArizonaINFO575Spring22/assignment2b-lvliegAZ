@@ -98,12 +98,14 @@ textarea {
 
   --clr-light: #fff;
   --clr-dark: #303030;
-  --clr-accent: #2B9E87;
+  --clr-accent: #57EBCD;
 
   --fs-h1: 3rem;
   --fs-h2: 2.25rem;
   --fs-h3: 1.25rem;
   --fs-body: 1rem;
+
+  --bs: 0.25em 0.25em 0.75em rgba(0,0,0,.25);
 }
 
 @media (min-width: 800px) {
@@ -174,6 +176,10 @@ nav {display:none;}
 
 }
 
+.welcome__image{
+  box-shadow: var(--bs);
+}
+
 @media (min-width: 600px) {
   .intro {
     display: grid;
@@ -189,12 +195,22 @@ nav {display:none;}
 .welcome__image {
   grid-area: img;
   min-width: 200px;
+  position: relative;
+  z-index: 2;
 }
 
 .section__title--subtitle {
+align-self: start;
+  grid-column: -1/1;
+  grid-row: 2;
+  text-align: right;
+  position: relative;
+  left: -1.5em;
+  width: calc(100% + 1.5em)
+}
+}
 
-}
-}
+/*
 
 /* ==========================================================================
    Helper classes
