@@ -166,7 +166,30 @@ h3 {font-size: var(--fs-h3)}
   font-size: var(--fs-h3)
 }
 
+/*IMAGES*/
 
+.responsive{
+  max-height: 400px;
+  width: auto;
+}
+
+.row{
+  display:flex;
+  flex-wrap: wrap;
+}
+.column-horiz {
+  align-self: auto;
+  padding: 5px;
+}
+.column-vert {
+  align-self: auto;
+  padding: 5px;
+}
+@media screen and (max-width: 500px) {
+  .column {
+    width: 100%;
+  }
+}
 /*INTRO*/
 
 .intro {
@@ -194,7 +217,6 @@ h3 {font-size: var(--fs-h3)}
   grid-area: img;
   min-width: 200px;
   position: relative;
-  z-index: 2;
 }
 
 .section__title--subtitle {
@@ -202,6 +224,7 @@ align-self: start;
   grid-column: -1/1;
   grid-row: 2;
   text-align: right;
+  padding: 1em;
   position: relative;
   left: -1.5em;
   width: calc(100% + 1.5em)
